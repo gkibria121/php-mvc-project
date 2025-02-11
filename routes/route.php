@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-const INDEX_URI = '/';
+const INDEX_URI = '';
 const INDEX_NAME = 'index';
 const ALLOWED_METHODS = ['GET', 'POST'];
 

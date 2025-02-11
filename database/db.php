@@ -23,6 +23,7 @@ function insertMessage(PDO $dbconnection, string $name, string $email, string $m
         ":email" => $email,
         ":message" => $message
     ]);
+    return true;
 }
 
 

@@ -1,6 +1,6 @@
  <main>
 
-     <div style="color: green;"><?php echo $success ?? '' ?></div>
+     <div style="color: green; padding:20px; "><?php echo $success['message'] ?? '' ?></div>
 
      <h1>Leave a Public Note</h1>
      <form method="POST">
