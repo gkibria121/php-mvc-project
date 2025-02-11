@@ -14,6 +14,7 @@ require_once  ROUTE_DIR . "/route.php";
 require_once  HELPER_DIR . "/helpers.php";
 require_once  DATABASE_DIR . "/db.php";
 require_once  FRAMEWORK_DIR . "/error_handling.php";
+require_once  FRAMEWORK_DIR . "/csrf.php";
 
 
 

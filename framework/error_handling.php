@@ -17,14 +17,12 @@ function errorHandler(
     int $errno,
     string $errstr,
     string $errfile,
-    int $errline,
-    array $errcontext
+    int $errline
 ): bool {
-
-    $message = "Uncaught exception ( $errstr  )   in file :  $errfile on line :  $errline";
+    $message = "Uncaught exception ($errstr) in file: $errfile on line: $errline";
 
     error_log($message);
     http_response_code(500);
-    serverError("An unexpected errro occurred. Please try agian later.");
+    serverError("An unexpected error occurred. Please try again later.");
     return true;
 }

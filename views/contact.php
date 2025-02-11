@@ -1,10 +1,10 @@
  <main>
 
      <div style="color: green; padding:20px; "><?php echo $success['message'] ?? '' ?></div>
-
+     <p style="color: red;"><?= $errors['others'] ?? ''  ?></p>
      <h1>Leave a Public Note</h1>
      <form method="POST">
-
+         <?php require_once("includes/_csrf.php") ?>
          <div>
              <label for="name">Name:</label>
              <input type="text" name="name">
