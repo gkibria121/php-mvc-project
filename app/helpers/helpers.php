@@ -11,7 +11,10 @@ function serverError(string $message): void
 }
 
 
-
+function redirect(string $location)
+{
+    header("Location: $location");
+}
 
 function renderView(string $filePath, array $data = [])
 {

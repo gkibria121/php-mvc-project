@@ -7,10 +7,10 @@ const ALLOWED_METHODS = ['GET', 'POST'];
 
 function normalizeUri(string $uri)
 {
+    $uri = strtolower(trim($uri, "/"));
 
     return $uri === INDEX_URI ? INDEX_NAME : $uri;
 }
-
 
 
 function notFound()
@@ -35,6 +35,7 @@ function dispatch(string $uri, string $method): void
     }
 
     $filePath = getFilePath($uri, $method);
+
     if (!file_exists($filePath)) {
         notFound();
     }
