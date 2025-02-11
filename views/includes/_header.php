@@ -48,6 +48,6 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Leave Note</a></li>
-            <li><a href="/">GuestBook</a></li>
+            <li><a href="/guestbook">GuestBook</a></li>
         </ul>
     </header>

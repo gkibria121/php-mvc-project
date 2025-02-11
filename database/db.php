@@ -11,3 +11,26 @@ function connectDB(): PDO
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $pdo;
 }
+
+
+function insertMessage(PDO $dbconnection, string $name, string $email, string $message)
+{
+
+    $stmt = $dbconnection->prepare("INSERT INTO messages(name, email, message) VALUES (:name, :email, :message)");
+
+    $stmt->execute([
+        ":name" => $name,
+        ":email" => $email,
+        ":message" => $message
+    ]);
+}
+
+
+function getMessages(PDO $dbconnection): array
+{
+
+    $sql = "SELECT * FROM messages";
+
+    $stmt = $dbconnection->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}

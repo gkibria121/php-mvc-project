@@ -19,16 +19,8 @@ $message = $_POST['message'];
 
 $db = connectDB();
 
+insertMessage($db, $name, $email, $message);
 
-$db = connectDB();
-
-$stmt = $db->prepare("INSERT INTO messages(name, email, message) VALUES (:name, :email, :message)");
-
-$stmt->execute([
-    ":name" => $name,
-    ":email" => $email,
-    ":message" => $message
-]);
 
 $_SESSION['sucess'] = "Thank you for your message!";
 
