@@ -8,7 +8,7 @@ const ALLOWED_METHODS = ['GET', 'POST'];
 function normalizeUri(string $uri)
 {
     $uri = strtolower(trim($uri, "/"));
-
+    $uri = strtok($uri, '?');
     return $uri === INDEX_URI ? INDEX_NAME : $uri;
 }
 
